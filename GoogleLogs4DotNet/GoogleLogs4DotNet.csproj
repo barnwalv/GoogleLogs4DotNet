@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	 <Version>2.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>GCP Logging for .NET Apps</Title>
     <Description>This .NET class library provides a simple and efficient way to capture and send application logs to Google Cloud Logs Explorer. Designed for easy integration, it can be added to any .NET application via NuGet.
@@ -13,6 +14,11 @@
     <Copyright>© 2025 VivekBarnwal85. All rights reserved.</Copyright>
     <PackageIcon>ChatGPT Image Jul 28, 2025, 11_43_31 AM-min.png</PackageIcon>
     <IncludeSymbols>False</IncludeSymbols>
+    <PackageReleaseNotes>Now client has to pass only projId and unique log Id as a parameter.</PackageReleaseNotes>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <PackageTags>google; log; logexplorer; applicationlogs;</PackageTags>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>

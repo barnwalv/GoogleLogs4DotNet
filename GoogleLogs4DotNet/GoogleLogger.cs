@@ -1,7 +1,6 @@
 ﻿using Google.Api;
 using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
-using Microsoft.Extensions.Configuration;
 
 namespace GoogleLogs4DotNet
 {
@@ -11,11 +10,11 @@ namespace GoogleLogs4DotNet
         private readonly string _logId;
         private readonly LoggingServiceV2Client _loggingClient;
 
-        public GoogleLogger(IConfiguration configuration, LoggingServiceV2Client loggingClient)
+        public GoogleLogger(string ProjectId, string logId)
         {
-            _projectId = configuration["GoogleCloud:ProjectId"] ?? "";
-            _logId = configuration["GoogleCloud:LogId"] ?? "";
-            _loggingClient = loggingClient;
+            _projectId = ProjectId ?? "";
+            _logId = logId ?? "";
+            _loggingClient = LoggingServiceV2Client.Create();
         }
 
         public void LoggedToGoogleLog(LogSeverity logSeverity, string textPayload)
